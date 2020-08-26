@@ -1,0 +1,25 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "client": "cd client && npm start",
+    "dev": "concurrently \"npm run client \" \"nodemon index.js\""
+  },
+  "keywords": [],
+  "author": "Carmelo Balzano <balzanoitaliano@gmail.com> (http://www.MyPage.com)",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^5.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "newsapi": "^2.4.0",
+    "nodemon": "^2.0.4",
+    "pusher": "^3.0.1",
+    "socket.io": "^2.3.0"
+  }
+}
