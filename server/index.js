@@ -3,6 +3,7 @@ const http = require('http');
 const express = require('express');
 const socketio = require('socket.io');
 const cors = require('cors');
+const path = require('path');
 
 const { addUser, removeUser, getUser, getUsersInRoom } = require('./users');
 
@@ -14,6 +15,14 @@ const io = socketio(server);
 
 app.use(cors());
 app.use(router);
+
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('client/build'));
+
+  app.get('*', () => {
+    res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
+  });
+}
 
 io.on('connect', (socket) => {
   socket.on('join', ({ name, room }, callback) => {
