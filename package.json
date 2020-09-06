@@ -1,5 +1,5 @@
 {
-  "name": "server",
+  "name": "office-chat",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -22,5 +22,9 @@
     "nodemon": "^2.0.4",
     "pusher": "^3.0.1",
     "socket.io": "^2.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Carmelobalzano2504/office-chat-weather"
   }
 }

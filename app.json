@@ -1,0 +1,6 @@
+{
+    "name": "Office-Chat",
+    "description": "Quick communication tool between colleagues in the office, also displays local weather",
+    "repository": "https://github.com/Carmelobalzano2504/office-chat-weather",
+    "image": "heroku/nodejs"
+}
